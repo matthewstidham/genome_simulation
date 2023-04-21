@@ -30,7 +30,7 @@ class GenomeSimulator:
         females = {key: value for key, value in candidates.items() if value['sex'] == 0}
         total_children = (random.randint(1,6) + random.randint(1, 6)) / 2
         for count in range(min([len(males), len(females)])):
-            for child in range(1, total_children):
+            for child in range(1, int(total_children)):
                 genome = []
                 father = list(males.values())[count]
                 mother = list(females.values())[count]
